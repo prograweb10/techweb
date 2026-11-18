@@ -1,12 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prograweb</title>
-    <link rel="stylesheet" href="css/styles.css">
+<!-- 
+  index.html
+  Este archivo es el ESQUELETO de la calculadora.
+  HTML usa etiquetas (lo que va entre < >) para decirle al navegador
+  qué mostrar en pantalla.
+-->
+
+<!DOCTYPE html> <!-- Le dice al navegador que este es un archivo HTML5 moderno -->
+
+<html lang="es"> <!-- La etiqueta <html> envuelve TODA la página. lang="es" indica que está en español -->
+
+<head> <!-- El <head> contiene información que NO se ve en pantalla (título, configuración, etc.) -->
+
+  <meta charset="UTF-8"> <!-- Permite que se vean bien las tildes y la ñ -->
+
+  <!-- Hace que la página se adapte al ancho de la pantalla del celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculadora Básica</title> <!-- Texto que aparece en la pestaña del navegador -->
+
+  <link rel="stylesheet" href="styles.css"> 
+
 </head>
+
 <body>
-    <script src="js/main.js"></script>
+  <div class="calculadora">
+    <input type="text" id="pantalla" disabled>
+
+    <div class="botones">
+
+      <button onclick="agregar('7')">7</button>
+      <button onclick="agregar('8')">8</button>
+      <button onclick="agregar('9')">9</button>
+      <button onclick="agregar('/')">/</button>
+
+      <button onclick="agregar('4')">4</button>
+      <button onclick="agregar('5')">5</button>
+      <button onclick="agregar('6')">6</button>
+      <button onclick="agregar('*')">*</button>
+
+      <button onclick="agregar('1')">1</button>
+      <button onclick="agregar('2')">2</button>
+      <button onclick="agregar('3')">3</button>
+      <button onclick="agregar('-')">-</button>
+      <button class="cero" onclick="agregar('0')">0</button>
+
+      <button onclick="agregar('.')">.</button> 
+      <button onclick="agregar('+')">+</button> 
+      <button onclick="calcular()">=</button>
+      <button class="limpiar" onclick="limpiar()">C</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
 </body>
 </html>
