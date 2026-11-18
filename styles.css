@@ -1,0 +1,65 @@
+/* 
+  styles.css
+  Aquí le damos ESTILO a la calculadora.
+  CSS funciona con "reglas": seleccionamos un elemento y le decimos cómo se ve.
+*/
+
+/* Estilo general para todo el cuerpo de la página */
+body {
+  font-family: Arial, sans-serif; /* Tipo de letra legible */
+  background: #f0f0f0;             /* Color de fondo gris claro */
+  display: flex;                   /* Usamos Flexbox para centrar la calculadora */
+  justify-content: center;         /* Centrado horizontal */
+  align-items: center;            /* Centrado vertical */
+  height: 100vh;                  /* La página ocupa el 100% del alto de la pantalla */
+  margin: 0;                      /* Quita el margen blanco que trae el navegador por defecto */
+}
+
+/* Estilo para la caja de la calculadora */
+.calculadora {
+  background: #ffffff;           /* Fondo blanco */
+  padding: 20px;                 /* Espacio interno alrededor del contenido */
+  border-radius: 10px;           /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor */
+  width: 260px;                  /* Ancho fijo de la calculadora */
+}
+
+/* Estilo para la pantalla (el input) */
+#pantalla {
+  width: 100%;                   /* Ocupa todo el ancho disponible */
+  height: 40px;                  /* Altura de la pantalla */
+  font-size: 18px;               /* Tamaño de letra grande para ver bien los números */
+  text-align: right;             /* Los números se alinean a la derecha */
+  margin-bottom: 10px;           /* Espacio debajo de la pantalla */
+  padding: 5px;                  /* Espacio interno para que los números no queden pegados */
+  box-sizing: border-box;        /* El padding no agranda el ancho total */
+}
+
+/* Estilo para la caja que contiene los botones */
+.botones {
+  display: grid;                                /* Usamos una cuadrícula */
+  grid-template-columns: repeat(4, 1fr);        /* 4 columnas de igual ancho */
+  gap: 5px;                                     /* Espacio entre botones */
+}
+
+/* Estilo para TODOS los botones */
+.botones button {
+  height: 45px;                  /* Altura de cada botón */
+  font-size: 18px;               /* Tamaño del texto del botón */
+  cursor: pointer;               /* El cursor se vuelve una mano al pasar por encima */
+  border: none;                  /* Quita el borde por defecto del navegador */
+  border-radius: 5px;            /* Bordes ligeramente redondeados */
+  background-color: #e0e0e0;    /* Color de fondo gris claro */
+}
+
+/* El botón 0 ocupa dos columnas */
+.cero {
+  grid-column: span 2;           /* Se extiende a lo ancho de 2 columnas */
+}
+
+/* El botón C (limpiar) ocupa toda la fila y tiene color rojo */
+.limpiar {
+  grid-column: span 4;           /* Ocupa las 4 columnas (fila completa) */
+  background-color: #f44336;    /* Fondo rojo */
+  color: white;                  /* Texto blanco para que se lea bien */
+}
